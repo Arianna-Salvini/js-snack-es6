@@ -3,9 +3,7 @@ console.log('Snack 4');
 
 // Crea un array di oggetti che rappresentano delle persone.
 // Ogni persona ha un nome, un cognome e un’età.
-// Crea quindi un nuovo array inserendo, per ogni persona, 
-// una frase con il nome e cognome e l’indicazione se può guidare, 
-// in base all’età.
+
 
 const people = [
     {
@@ -35,6 +33,21 @@ const people = [
     },
 ]
 
+// Crea quindi un nuovo array inserendo, per ogni persona, 
+// una frase con il nome e cognome e l’indicazione se può guidare, 
+// in base all’età.
+
+// const drivingEligible = people.map(person => {
+//     if (person.age >= 18 && person.age <= 80) {
+//         return `${person.name} Può guidare`
+//     } else {
+//         return `${person.name} Non Può guidare`
+
+//     }
+// })
+
+// console.log(drivingEligible);
+
 function drivingAge(age) {
     if (age >= 18 && age <= 80) {
         return 'Può guidare'
@@ -44,7 +57,9 @@ function drivingAge(age) {
 }
 
 const drivingEligible = people.map(person => {
-    return person.name + ' ' + drivingAge(person.age);
+    return person.name + ' ' + person.surname + ' ' + drivingAge(person.age);
 });
 
 console.log(drivingEligible);
+
+
