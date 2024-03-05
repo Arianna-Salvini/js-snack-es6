@@ -29,13 +29,13 @@ const people = [
         age: 95,
     },
     {
-        name: 'Ahsoka', 
+        name: 'Ahsoka',
         surname: 'Tano',
         age: 16,
     },
 ]
 
-function drivingAge (age){
+function drivingAge(age) {
     if (age >= 18 && age <= 80) {
         return 'Può guidare'
     } else {
@@ -43,8 +43,8 @@ function drivingAge (age){
     }
 }
 
-const drivingEligible = people.map(people =>{
-    return people.name +' ' + drivingAge(people.age);
+const drivingEligible = people.map(person => {
+    return person.name + ' ' + drivingAge(person.age);
 });
 
 console.log(drivingEligible);
