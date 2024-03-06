@@ -31,11 +31,12 @@ const racingBikes = [
 let lowerWeightBike = racingBikes[0];
 
 racingBikes.forEach(function(bike){
-    if (bike.weightKg < lowerWeightBike.weightKg ){
+    if (bike.weightKg < lowerWeightBike.weightKg){
         lowerWeightBike = bike;
     };
 });
 
+// const {name, weightKg} = lowerWeightBike
 const {name: bikeName, weightKg: bikeWeight} = lowerWeightBike
 
 console.log(`The lightest bike is ${bikeName} with ${bikeWeight}Kg`)
