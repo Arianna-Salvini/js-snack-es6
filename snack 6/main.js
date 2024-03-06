@@ -46,13 +46,17 @@ function randomNumb(min, max) {
 footballTeams.map(team => {
     team.PF = randomNumb(0, 114);
     team.FS = randomNumb(0, 114);
-});
-
+})
 console.log(footballTeams);
 
 // Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
-const updateTeamScore = []
+// const [name, , FS] = footballTeams per nuovop array escludendo il terzo elemento
+// const {name,FS} = dell'elemento dell'array = nuovo array con solo 2 valori per elemento ???
 
+const onlyTeamAndFS = footballTeams.map(team => {
+    const { name, FS } = team
+    return { name, FS }
+})
 
-
+console.log(onlyTeamAndFS);
