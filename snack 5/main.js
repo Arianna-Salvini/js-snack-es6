@@ -28,13 +28,12 @@ const racingBikes = [
 
 // Stampare in console la bici con peso minore utilizzando destructuring e template literal
 // - Trovo la bici con pesso minore
-const lowerWeightBike = racingBikes[0];
+let lowerWeightBike = racingBikes[0];
 
 racingBikes.forEach(function(bike){
     if (bike.weightKg < lowerWeightBike.weightKg ){
         lowerWeightBike = bike;
     };
-    console.log(lowerWeightBike); 
 });
 
 const {name: bikeName, weightKg: bikeWeight} = lowerWeightBike
