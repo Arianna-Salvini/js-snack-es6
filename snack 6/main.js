@@ -60,3 +60,12 @@ const onlyTeamAndFS = footballTeams.map(team => {
 })
 
 console.log(onlyTeamAndFS);
+
+// Scrivo il risultato nella DOM
+
+const markUp = `  <li>
+<div class="card-body p-2 border d-flex justify-content-center bg-light shadow-sm">
+    <h5 class="card-title lh-1 mx-2">${footballTeams.name}</h5>
+    <h6 class="card-subtitle text-muted lh-base">Falli Subiti: ${footballTeams.Fs}</h6>
+</div>
+</li>`
